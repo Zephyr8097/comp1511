@@ -1,0 +1,15 @@
+//written by ZephyrZhou(z5212919@unsw.edu.au)
+//written 05-03-2019
+//lab03 exerciese order3_challange1
+#include<stdio.h>
+int main()
+{
+    int a, b, c;
+    printf("Enter integer: ");
+    scanf("%d", &a);
+    printf("Enter integer: ");
+    scanf("%d", &b);
+    printf("Enter integer: ");
+    scanf("%d", &c);
+    (a <= b && b <= c && printf("%d %d %d",a, b, c) || (a<
+    
