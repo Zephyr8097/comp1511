@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(int argc, char *argv[]) {
+    int ch = getchar ();
+    int i = 0;
+    
+    while (ch != EOF) {
+        if (ch >= '0' && ch <= '9') {
+            i = ch - '0';    
+        }
+    }
+}

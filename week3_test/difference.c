@@ -1,0 +1,18 @@
+//written by ZephyrZhou(z5212919@unsw.edu.au)
+//written 07-03-2019
+//test03 difference
+#include<stdio.h>
+int main(void){
+    int a, b, difference;
+    scanf("%d %d", &a, &b);
+    if(a<b) {
+        difference = b - a;
+        printf("%d\n",difference);
+    } if(a>b) {
+        difference = a - b;
+        printf("%d\n",difference);
+    } if(a==b) {
+        printf("equal\n");
+    }
+    return 0;
+}            

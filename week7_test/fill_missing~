@@ -1,0 +1,51 @@
+//Written by ZHOU ZIYU(z5212919)
+//09-04-2019
+//Week7 test fill_missing
+
+#include<stdio.h>
+
+void choise(int *a,int n);
+
+int main() {
+    
+    int number[1000] = {0};
+    int size = 0;
+    
+    while (scanf ("%d",&number[size]) == 1) {
+        size++;
+    }
+    
+    
+    
+    
+    return 0;
+}
+
+void choise(int *a,int n) {
+
+    int i,j,k,temp;
+
+    for(i=0;i<n-1;i++) {
+
+        k=i;
+
+        for(j=i+1;j<n;j++) {
+
+            if(a[k]>a[j ]) {
+                k=j;
+            }    
+
+            if(i!=k) {
+
+                temp=a[i ];
+
+                a[i ]=a[k];
+
+                a[k]=temp;
+
+            }
+
+        }
+
+    }
+}        

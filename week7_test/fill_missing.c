@@ -1,0 +1,75 @@
+//Written by Zhou ziyu(z5212919)
+//10-04-2019
+//Week 7 test fill_missing
+
+
+#include <stdio.h>
+void Sort(int array[], int size);
+int main(){
+    
+    int array[1000] = {0};
+    int i = 0;
+    int fill[1000] = {0};
+    int a;
+    int x =0;
+    int b =1;
+    int counter =0;
+    
+    while( scanf( "%d", &array[i]) == 1)
+    {
+        i++;
+    }
+    
+    Sort( array, i); 
+    
+    if( array[0]>1){             
+        for( i =1; i< array[0]; i++)
+        {
+        fill[x] = i;
+        x++;
+        counter++;
+        }
+    }
+  
+    
+    for( i =0; array[i+1] != 0; i++) 
+    {
+        if( array[i+1] - array[i] > 0)
+        {
+            a = array[i+1] - array[i];
+            b=1;
+            while( a > 1)             
+            {
+                fill[x] = array[i] + b;
+                
+                x++;
+                b++;
+                a--;
+                counter++;
+            }
+        }
+    }
+    
+    for( i =0; i< counter; i++)
+    {
+        printf("%d ", fill[i]);
+    }
+    printf("\n");    
+    return 0;
+}
+    
+void Sort(int array[], int size)                       
+{
+    int i, j, agent;
+    for(i = 0; i < size-1;i++) {
+        for(j = 0; j<(size - i - 1); j++) {
+            if( array[j+1] != 0) {
+                if(array[j] > array[j+1]) {
+                    agent = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = agent;
+                }
+            }
+        }
+    }
+}

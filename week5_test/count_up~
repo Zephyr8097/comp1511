@@ -1,0 +1,11 @@
+//Written by ZephyrZhou(z5212919)
+//23-03-2019
+//week5 test count_up
+
+#include<stdio.h>
+
+int main() {
+    int lower, upper;
+    printf("Enter lower: ");
+    scanf("%d",&lower);
+    pinrtf()

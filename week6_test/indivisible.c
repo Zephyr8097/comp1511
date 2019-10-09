@@ -1,0 +1,43 @@
+// WEEK6 test indivisible
+// Zephyr Zhou(z5212919)
+// 30-03-2019
+
+#include <stdio.h>
+#define SIZE      1000
+
+int main(void) {
+    
+    int x = 0, y = 0;
+    int divise[SIZE] = {0};
+    int mutiple[SIZE] = {0};
+    int counter = 0;
+    int size = 0;
+    
+    while (scanf ("%d",&divise[size]) == 1) {
+        size++;
+    }
+    
+    for (x = 0; x < size; x++) {
+        for (y = 0; y < size; y++) {
+            if ((x != y) && (divise[x] % divise[y] == 0)) {
+                mutiple[counter] = x;
+                counter++;
+                break;
+            }    
+        }        
+    }    
+    
+    printf("Indivisible numbers:");
+    counter = 0;
+    for (x = 0; x < size; x++) {
+        if (x == mutiple[counter]) {
+            counter++;
+            continue;
+        } else {
+            printf(" %d", divise[x]);
+        }        
+    }
+    
+    printf("\n");
+    return 0;
+}        
