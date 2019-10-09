@@ -1,0 +1,45 @@
+//Written by ZhouZiyu (z5212919)
+//on 21-03-2019
+//Lab05 vector_permutation
+
+#include <stdio.h>
+#define MAX_SIZE 1000 
+
+void order(int l, int vector[l], int permutation[l]);
+
+int main() {
+    int length;
+    int vector[MAX_SIZE];
+    int permutation[MAX_SIZE];
+   
+    printf("Enter vector length: ");
+    scanf("%d",&length);
+    int i = 0;
+    printf("Enter vector: ");
+    while(i < length) {
+        scanf("%d",&vector[i]);
+        i++;
+    }
+    
+    printf("Enter permutation: ");
+    i = 0;
+    while(i < length) {
+        scanf("%d",&permutation[i]);
+        if(permutation[i] < 0 || permutation[i] >= length){
+            printf("Invalid permutation\n");
+        }    
+        i++;
+    }
+    
+    order(length, vector, permutation);    
+    return 0;
+}    
+
+void order(int l, int vector[l], int permutation[l]) {
+    int i = 0;
+    while(i < l) {
+        printf("%d ",vector[permutation[i]]);
+        i++;
+    }
+    printf("\n");    
+}        

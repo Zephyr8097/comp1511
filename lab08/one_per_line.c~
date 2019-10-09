@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+
+
+int main () {
+
+    
+    char ch = getchar ();
+    printf("Enter a string: ");
+    while (ch != EOF) {
+        if (ch == 10) {
+            break;
+        } else {
+            printf("%c\n",ch);
+            ch = getchar ();
+        }
+    }
+    
+    return 0;
+
+
+}
